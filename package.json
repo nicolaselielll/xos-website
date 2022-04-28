@@ -10,13 +10,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/vercel-builder": "^0.22.1",
+    "@nuxtjs/vuetify": "^1.11.2",
     "core-js": "^3.6.5",
     "gsap": "npm:@gsap/shockingly@^3.10.4",
     "nuxt": "^2.14.6",
-    "nuxt-gsap-module": "^1.7.0",
-    "@nuxtjs/vuetify": "^1.11.2"
-  },
-  "devDependencies": {
-    "@nuxtjs/vercel-builder": "^0.22.1"
+    "nuxt-gsap-module": "^1.7.0"
   }
 }
