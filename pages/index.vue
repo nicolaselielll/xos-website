@@ -19,7 +19,7 @@
               </div>
               <div class="border"></div> 
               <div class="info-block">
-                <p class="info-title">Length</p>
+                <p class="info-title">Lenght</p>
                 <p>32m</p>
               </div>
             </div>
