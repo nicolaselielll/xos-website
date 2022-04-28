@@ -45,6 +45,55 @@ export default {
     }
   },
 
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    beforeEnter(el) {
+      document.body.classList.add("page-entering");
+      this.$gsap.set(el, {
+        opacity: 0
+      })
+    },
+
+    afterEnter(el) {
+      this.$nuxt.$emit("refresh-scroll");
+      this.$nuxt.$emit("start-scroll");
+
+      setTimeout(() => {
+        document.body.classList.remove("page-transitioning", "page-entering");
+      }, 50);
+    },
+
+    beforeLeave(el) {
+      this.$nuxt.$emit("stop-scroll");
+      document.body.classList.add("page-transitioning", "page-leaving");
+    },
+    afterLeave(el) {
+      document.body.classList.remove("page-leaving");
+      this.$nuxt.$emit("reset-scroll");
+    },
+
+    enter(el, done) {
+      this.$gsap.to(el, {
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    },
+
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    }
+  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios

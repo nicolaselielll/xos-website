@@ -1,7 +1,6 @@
 <template>
   <div id="smooth-wrapper">
     <Nav />
-    <div class="nav-spacer"></div>
     <div id="smooth-content">
       <slot />
       <Footer />
@@ -175,6 +174,6 @@ export default {
 </script>
 <style scoped>
 .nav-spacer {
-  height: 110px;
+  height: 100px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-      <GSAPScrollSmoother :vars="{ smooth: 1, effects: true, normalizeScroll: true, ignoreMobileResize: false, preventDefault: true, smoothTouch: 1}">
+      <GSAPScrollSmoother :vars="{ smooth: 1, effects: true, normalizeScroll: true, ignoreMobileResize: false, preventDefault: true, smoothTouch: 0.5}">
         <nuxt />
       </GSAPScrollSmoother>
     </div>

@@ -1,6 +1,19 @@
 .section {
-    padding: 0px 120px;
+    padding: 0px 100px;
     position: relative;
+}
+
+@media only screen and (max-width: 960px) {
+    .section {
+        padding: 0px 50px;
+        position: relative;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .section {
+        padding: 0px 25px;
+        position: relative;
+    }
 }
 
 @font-face {
@@ -8,65 +21,160 @@
     font-weight: 400;
     font-style: normal;
     src: local("Object Sans"),
-    url(./Fonts/ObjectSans-Regular.ttf) format("truetype");
+    url(./Fonts/ObjectSans/ObjectSans-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: "Object Sans";
     font-weight: 800;
     font-style: normal;
     src: local("Object Sans"),
-    url(./Fonts/ObjectSans-Bold.ttf) format("truetype");
+    url(./Fonts/ObjectSans/ObjectSans-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Eiko";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Eiko"),
+    url(./Fonts/Eiko/PPEiko-Medium.otf) format("truetype");
 }
 
-h1, h2, h3, h4, h5, p, a, span {
+h1, h2 {
+    font-family: Eiko;
+    font-weight: 200 !important;
+}
+
+h3, h4, h5, p, a, span {
     font-family: Object Sans;
 }
 
 .h1 {
-    font-size: 130px;
+    font-size: 8vw;
     line-height: 1.2;
     font-weight: 800;
+    color: #08172E;
 }
 .h2 {
-    font-size: 63px;
+    font-size: 4vw;
     line-height: 1.2;
     font-weight: 800;
+    color: #08172E;
 }
 .h3 {
-    font-size: 34px;
+    font-size: 2vw;
     line-height: 1.2;
     font-weight: 800;
+    color: #08172E;
 }
 .h4 {
-    font-size: 24px;
+    font-size: 1.8vw;
     line-height: 1.2;
     font-weight: 400;
+    color: #08172E;
 }
 .h5 {
     font-size: 20px;
     line-height: 1.2;
     font-weight: 800;
+    color: #08172E;
 }
 
 .p-large {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1.2vw;
+    line-height: 1.8;
     font-weight: 400;
+    color: #2D2D2D;
 }
 .p-medium {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 1.1vw;
+    line-height: 1.8;
     font-weight: 400;
+    color: #2D2D2D
 }
 .p-small {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 1vw;
+    line-height: 1.8;
     font-weight: 400;
+    color: #2D2D2D
+}
+
+a {
+    color: #2D2D2D;
 }
 
 @media only screen and (max-width: 960px) {
+    .h1 {
+        font-size: 11vw;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #08172E;
+    }
+    .h2 {
+        font-size: 6vw;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #08172E;
+    }
 
+    .h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #08172E;
+    }
+    .h4 {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #08172E;
+    }
+
+    .p-large {
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #2D2D2D;
+    }
+    .p-medium {
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #2D2D2D
+    }
+    .p-small {
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #2D2D2D
+    }
 }
 @media only screen and (max-width: 600px) {
-    
+    .h2 {
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #08172E;
+    }
+    .h3 {
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 800;
+        color: #08172E;
+    }
+    .h4 {
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #08172E;
+    }
 }
+
+/* BUTTONS */
+
+.primary-cta {
+    background: #F5F5F5;
+    padding: 0 60px;
+    height: 90px;
+    color: #000;
+    font-size: 16px;
+    font-family: Object Sans;
+  }
